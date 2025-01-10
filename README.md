@@ -10,11 +10,11 @@ Submission is the url to your public github repository.
 
 Answer:
 
-resource "aws_cloudwatch_metric_alarm" " cloudwatch_alarm " {
-  alarm_name          = " yl-info-count-breach"
-  comparison_operator = " GreaterThanThreshold"
+resource "aws_cloudwatch_metric_alarm" "cloudwatch_alarm " {
+  alarm_name          = "yl-info-count-breach"
+  comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = 1
-  metric_name         = " info-count"
+  metric_name         = "info-count"
   namespace           = "/moviedb-api/yl"
   period              = 60
   statistic           = "Sum"
@@ -25,7 +25,7 @@ resource "aws_cloudwatch_metric_alarm" " cloudwatch_alarm " {
 }
 
 resource "aws_sns_topic" "topic" {
-  name = " yl_CloudWatch_Alarms_Topic"
+  name = "yl_CloudWatch_Alarms_Topic"
 }
 
 resource "aws_sns_topic_subscription" "email-target" {
