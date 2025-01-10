@@ -10,7 +10,7 @@ Submission is the url to your public github repository.
 
 Answer:
 
-resource "aws_cloudwatch_metric_alarm" "cloudwatch_alarm " {
+resource "aws_cloudwatch_metric_alarm" "cloudwatch_alarm" {
   alarm_name          = "yl-info-count-breach"
   comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = 1
