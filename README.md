@@ -33,3 +33,4 @@ resource "aws_sns_topic_subscription" "email-target" {
   protocol  = "email"
   endpoint  = "yllee9127@gmail.com"
 }
+
